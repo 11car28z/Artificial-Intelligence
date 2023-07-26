@@ -1,0 +1,58 @@
+<html>
+<head>
+  <title>Image Classifier</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+</head>
+
+<body>
+  <main>
+    <div class="container">
+        <h1>Dog Breed Identification Web App</h1>
+        <h2>2018250051 차수진</h2>
+        <div class="row">
+            <div class="progress progress-bar-striped progress-bar-animated mb-2" style="display:none">                
+                Loading Model
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <select id="model-selector" class="custom-select">
+                    <option selected="" disabled="">Select Model</option>
+                    <option>MobileNetV2</option>
+                    <!--<option>VGG16</option>-->
+                </select>
+            </div>
+            <div class="col-sm-6">
+                <input id="image-selector" class="form-control border-0" type="file">
+            </div>
+            <div class="col-sm-3">
+                <button id="predict-button" class="btn btn-dark float-right">Predict</button>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <h2 class="ml-3">Predictions:</h2>
+                <ol id="prediction-list"></ol>
+            </div>            
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2 class="ml-3">Image</h2>
+                <img id="selected-image" class="ml-3" src="">
+            </div>            
+        </div>
+    </div>
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js"></script>
+  <script src="/javascripts/dogbreed_classes.js"></script>
+  <script src="/javascripts/predict.js"></script>
+
+
+</body></html>
